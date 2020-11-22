@@ -161,8 +161,7 @@
 
     	<div id="nutrientInfo" class="is-success">
     		
-    			Nutrient (Quantity)<br><div class="pContain">Percent of Daily Value: ____<progress class="progress is-success" value="60" max="100"></progress></div>
-
+    			
     	</div>
     	<br><br> <p class="has-text-weight-bold" id="ingredientContain">Ingredient Info<br><br></p>
     	<div id="ingredientContain"><div class="field is-grouped is-grouped-multiline" id="ingredientInfo">
@@ -409,7 +408,7 @@ async function fetchURL(url, callNumber)
             		
             		
             	}
-            	document.getElementById("nutrientInfo").innerHTML = nutrientInfoList.join("<br>")
+            	document.getElementById("nutrientInfo").innerHTML = "The following data points are all statistics on the quantity of each good nutrient in the recipe as a percent of your required amount for that nutrient each day(Percent of Daily Value). In essense, the higher the value, the healthier the dish. <br><br>" + nutrientInfoList.join("<br>")
 
 
             }

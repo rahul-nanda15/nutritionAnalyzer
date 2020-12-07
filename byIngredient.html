@@ -7,647 +7,867 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://kit.fontawesome.com/4b51920527.js"></script>
 	
-			<title>Test</title>
+			<title>Search By Ingredient</title>
 
 	</head>
 
 	<body>
-<div id="navContain" data-aos="fade-up">
-	<nav class="breadcrumb is-centered  has-bullet-separator" aria-label="breadcrumbs">
-  <ul>
-    <li><a class="has-text-success has-text-weight-semibold" href="index.html">Home</a></li>
-    <li><a class="has-text-success has-text-weight-semibold"href="byRecipe.html">Recipe Search</a></li>
-    <li class="is-active"><a href="#" aria-current="page">Fridge Search</a></li>
-    <li><a class="has-text-success has-text-weight-semibold"href="#">Our Data</a></li>
-    
-  </ul>
-</nav>	
-</div>
-
-<div id="ingredientSearch" data-aos="fade-up">
-
-	<div>
-		<div id="title" data-aos="fade-up" class="FrTitle"><h1 class="is-size-1 has-text-success has-text-centered is-family-primary has-text-weight-bold" id="Stitle">Fridge Search</h1></div>
-		<div id="whitetext">
-
-			<div class="fSearch-container">
 
 
-				  <div class="Fwidget">
+		<div id="navContain" data-aos="fade-up">
 
-				  		<div class="card">
-							  <header class="card-header">
-							    <p class="card-header-title has-text-success">
-							      Search By Ingredients
-							      <i class="fas fa-search" id="ham"></i>
-							    </p>
-							    
-							  </header>
-							  <div class="card-content">
-							    <div class="content" id="cContent">
-							    	Using this widget, you may add up to 10 ingredients to your "Basket" and our data will provide you with the most healthy recipe option based on our generated Nutrition Score and your inputted ingredients.<br><br>Add Ingredients<br>
-							      	
-							    	<div id="dropContain">
+			<nav class="breadcrumb is-centered  has-bullet-separator" aria-label="breadcrumbs">
 
-							    		<div id="set1">
-									 
-								        <select name="produce" id="produce" class="menu">
-								        	
-								        <option>Produce</option><option>Bananas</option><option>Apples</option><option>Strawberries</option><option>Potatoes</option><option>Tomatoes</option><option>Onions</option><option>Grapes</option><option>Carrots</option><option>Oranges</option><option>Lemon</option><option>Lettuce</option><option>Cucumbers</option><option>Avocadoes</option><option>Pineapple</option><option>Garlic</option><option>Limes</option><option>Mushrooms</option><option>Mushrooms</option>
-								        </select>
-								        <button class="button is-success is-outlined is-small" onclick="addTo(1)">Add</button></div>
+			  <ul>
+			  	<!-- creating nav bar and active tags -->
+			    <li><a class="has-text-success has-text-weight-semibold" href="index.html">Home</a></li>
+			    <li><a class="has-text-success has-text-weight-semibold"href="byRecipe.html">Recipe Search</a></li>
+			    <li class="is-active"><a href="#" aria-current="page">Fridge Search</a></li>
+			    <li><a class="has-text-success has-text-weight-semibold"href="ourdata.html">Our Data</a></li>
+			    
+			  </ul>
 
-								        <div id="set2">
-									 
-								        <select name="dairy" id="dairy" class="menu">
-								        	
-								        <option>Dairy</option><option>Milk</option><option>Butter</option><option>Cheese</option><option>Yogurt</option><option>Cream</option><option>Ice Cream</option>
-								        </select>
-								        <button class="button is-success is-outlined is-small" onclick="addTo(2)">Add</button></div>
-								        <div id="set3">
-									 
-								        <select id="beverages" class="menu">
-								        <option>Beverages</option><option>Water</option><option>Wine</option><option>Tomato Juice</option><option>Lemonade</option><option>Hot Chocolate</option><option>Apple Juice</option><option>Coffee</option><option>Coconut Milk</option><option>Soda</option>
-								       
-								        </select>
-								        <button class="button is-success is-outlined is-small" onclick="addTo(3)">Add</button></div>
-								</div>
-										<div id="dropContain1">
-
-							    		<div id="set1">
-									 
-								        <select id="meat" class="menu">
-								        	
-								        <option>Meat</option><option>Chicken</option><option>Chorizo</option><option>Beef</option><option>Pork</option><option>Bacon</option><option>Lamb</option><option>Brisket</option>Hot Dog<option>Ham</option><option>Turkey</option><option>Salami</option><option>Pepperoni</option>
-								        </select>
-								        <button class="button is-success is-outlined is-small" onclick="addTo(4)">Add</button></div>
-
-								        <div id="set2">
-									 
-								        <select id="grains" class="menu">
-								        	
-								        <option>Grain</option><option>Bagels</option><option>White Bread</option><option>Whole Wheat Bread</option><option>Tortillas</option><option>Pasta</option><option>Granola</option><option>Rice</option><option>Ramen</option><option>Buns</option>
-								        </select>
-								        <button class="button is-success is-outlined is-small" onclick="addTo(5)">Add</button></div>
-								        <div id="set3">
-									 
-								        <select id="condiments" class="menu">
-								        	
-								        <option>Condiments</option><option>Ketchup</option><option>Mustard</option><option>Gravy</option><option>Mayonnaise</option><option>Salsa</option><option>Guacamole</option><option>Relish</option><option>Peanut Butter</option><option>Ranch Dressing</option><option>Soy Sauce</option><option>Nutella</option><option>Vinegar<option>Steak Sauce</option></option>
-								        </select>
-								        <button class="button is-success is-outlined is-small" onclick="addTo(6)">Add</button></div>
-								</div>
-								<div id="dropContain2">
-
-							    		<div id="set1">
-									 
-								        <select id="seasoning" class="menu">
-								        	
-								        <option>Seasoning</option><option>Allspice</option><option>Sugar</option><option>Salt</option><option>Black Pepper</option><option>Basil</option><option>Cayenne</option><option>Cumin</option><option>Rosemary</option><option>Saffron</option><option>Mushrooms</option>Vanilla Extract
-								        </select>
-								        <button class="button is-success is-outlined is-small" onclick="addTo(7)">Add</button></div>
-
-								        <div id="set2">
-									 
-								        <select id="sweets" class="menu">
-								        	
-								        <option>Sweets</option><option>Kit Kat</option><option>Twinkie</option><option>Oreos</option><option>Jello</option><option>Marshmallows</option><option>Chocolate</option><option>Skittles</option>
-								        </select>
-								        <button class="button is-success is-outlined is-small" onclick="addTo(8)">Add</button></div>
-								        <div id="set3">
-									 
-								        <select id="seafood" class="menu">
-								        	
-								        <option>Seafood</option><option>Tuna</option><option>Catfish</option><option>Clams</option><option>Cod</option><option>Crab</option><option>Salmon</option><option>Swordfish</option><option>Shrimp</option><option>Squid</option><option>Fish Eggs</option>
-								        </select>
-								        <button class="button is-success is-outlined is-small" onclick="addTo(9)">Add</button></div>
-								</div>
-							    </div>
-
-
-							    <div id="bottom">
-							    	
-							    	<div>
-							    		
-							    		<table id="Table" cellspacing="0">
-										    <tr>
-										        
-										        <th style="width:80px">Basket</th>
-										        
-										    </tr>
-										</table><br>
-										<div id="fillerText">None</div>
-										<table  id="Table1" cellspacing="0">
-										    <tr>
-										        <th>&nbsp;</th>
-										        <th style="width:80px"></th>
-										        
-										    </tr>
-										    
-										</table>
-
-							    	</div>
-
-
-							    	<div id="btns">
-							    		<button class="button is-success is-outlined is-small" onclick="removeItem()">Remove Ingredient<i id="ham" class="fa fa-minus-circle"></i></button>
-							    		<div id="searchcontain"><button class="button is-success is-outlined is-small" onclick="goSearch2()">Search for Recipe <i id="ham" class="fa fa-search-plus"></i></button></div>
-							    		<button class="button is-success is-outlined is-small" onclick="clearIngredients()">Empty Basket<i id="ham" class="fa fa-shopping-basket"></i></button>
-							    	</div>
-
-
-							    </div>
-
-							  </div>
-							
-						</div>
-
-				  </div>
-
-				  		
-
-
-				  <div class="Fresults">
-				  	
-
-				  		<div class="card">
-							  <header class="card-header">
-							    <p class="card-header-title has-text-success">
-							      Search Results
-							      <i class="fas fa-list-alt" id="ham"></i>
-							    </p>
-							  </header>
-							  <div class="card-content">
-							    <div class="content">
-							      We've searched our database and this is what we found as your healthiest option. You will be able to view in-depth data and information necessary for preparing the meal.
-							     
-
-							      <div class="info1">
-							      	
-							      	<div class="recipeImg" id="image"></div>
-  									<div class="infoRight">
-
-  										<h3 class="has-text-success" id="recipeName">Recipe Name</h3>
-
-  										<h5 class="has-text-success is-size-6 has-text-weight-bold" id="Nscore">Nutrition Score:</h5>
-  										
-  										<h5 class="has-text-success is-size-6 has-text-weight-light" id="time">Preparation Time</h5>
-  										<h5 class="has-text-success is-size-6 has-text-weight-light" id="difficulty">Difficulty</h5>
-  										<h5 class="has-text-success is-size-6 has-text-weight-light" id="calories">Calories</h5>
-  										<h5 class="has-text-success is-size-6 has-text-weight-light is-capitalized" id="diets">Diets</h5>
-  										<h5 class="has-text-success is-size-6 has-text-weight-light" id="cuisine">Cuisine</h5>
-
-  										
-
-  										<!--difficlty score and levels of nutrition score(low, high, etc)-->
-  										
-
-  									</div>
-
-							      </div>
-
-							    </div>
-							  </div>
-							  <footer class="card-footer">
-							  		
-								    <a id="link" href="" class="card-footer-item has-text-success">View Recipe Steps <i class="fas fa-link" id="ham"></i></a>
-								    <a href="#" class="card-footer-item"></a>
-								    <a class="card-footer-item has-text-success modal-button" data-target = "#modal">View More<i id="ham" class="fas fa-plus"></i></a>
-	  </footer>
-							  
-						</div>
-
-				  </div> 
-			</div>
+			</nav>	
 
 		</div>
 
+		<!-- data-aos is the animation tag from my imported animation library-->
 
+		<div id="ingredientSearch" data-aos="fade-up"><!--data-aos='animationTitle'-->
+
+			<div>
+
+				<div id="title" data-aos="fade-up" class="FrTitle">
+						<!-- page title-->
+						<h1 class="is-size-1 has-text-success has-text-centered is-family-primary has-text-weight-bold" id="Stitle">Fridge Search</h1>
+
+				</div>
+
+				<div id="bodyDiv">
+
+					<div class="fSearch-container">
+
+
+						  <div class="Fwidget"><!--fwidget is the input card (left side) div of the page-->
+
+						  		<div class="card">
+
+									  <header class="card-header">
+									    <p class="card-header-title has-text-success"><!--card title-->
+									      Search By Ingredients
+									      <i class="fas fa-search" id="icon"></i>
+									    </p>
+									    
+									  </header>
+
+									  <div class="card-content">
+
+									    <div class="content" id="cContent">
+
+									    	<!--card description-->
+
+									    	Using this widget, you may add up to 10 ingredients to your "Basket" and our data will provide you with the most healthy recipe option based on our generated Nutrition Score and your inputted ingredients.<br><br>Add Ingredients<br>
+
+									    	<!--creating each dropdown/select option menu-->
+									      	<!-- each dropcontain# is the row of dropdowns. on the page there are 3 dropdowns per row e.g. produce, dairy, and beverages-->
+									    	<div id="dropContain">
+
+									    		<div id="set1">
+											 
+											        <select name="produce" id="produce" class="menu">
+											        	
+											        	<option>Produce</option><option>Bananas</option><option>Apples</option><option>Strawberries</option><option>Potatoes</option><option>Tomatoes</option><option>Onions</option><option>Grapes</option><option>Carrots</option><option>Oranges</option><option>Lemon</option><option>Lettuce</option><option>Cucumbers</option><option>Avocadoes</option><option>Pineapple</option><option>Garlic</option><option>Limes</option><option>Mushrooms</option><option>Mushrooms</option>
+
+											        </select>
+
+											        <!--button to add ingredient to ingredient list or "basket"-->
+											        <button class="button is-success is-outlined is-small" onclick="addTo(1)">Add</button> <!--executes the 1st parameter of addto() function-->
+
+										    	</div>
+
+										        <div id="set2">
+											 
+											        <select name="dairy" id="dairy" class="menu">
+											        	
+											        	<option>Dairy</option><option>Milk</option><option>Butter</option><option>Cheese</option><option>Yogurt</option><option>Cream</option><option>Ice Cream</option>
+
+											        </select>
+
+										        	<button class="button is-success is-outlined is-small" onclick="addTo(2)">Add
+										        	</button> <!--executes the 2nd parameter of addto() function. each different parameter retrieves the value of the select option menu-->
+
+										    	</div>
+
+										        <div id="set3">
+											 
+											        <select id="beverages" class="menu"> <!--beverages option menu-->
+
+											        	<option>Beverages</option><option>Water</option><option>Wine</option><option>Tomato Juice</option><option>Lemonade</option><option>Hot Chocolate</option><option>Apple Juice</option><option>Coffee</option><option>Coconut Milk</option><option>Soda</option>
+											       
+											        </select>
+
+										        	<button class="button is-success is-outlined is-small" onclick="addTo(3)">Add
+										        	</button><!--executes the 3rd parameter of addto() function. each different parameter retrieves the value of the select option menu-->
+
+										        </div>
+
+											</div>
+
+											<div id="dropContain1"> <!--dropcontain1 is the second row of dropdown menus-->
+
+									    		<div id="set1">
+											 
+											        <select id="meat" class="menu"><!--meat dropdown-->
+											        	
+											        	<option>Meat</option><option>Chicken</option><option>Chorizo</option><option>Beef</option><option>Pork</option><option>Bacon</option><option>Lamb</option><option>Brisket</option>Hot Dog<option>Ham</option><option>Turkey</option><option>Salami</option><option>Pepperoni</option>
+
+											        </select>
+										       
+										        	<button class="button is-success is-outlined is-small" onclick="addTo(4)">Add
+										        	</button><!--executes the 4th parameter of addto() function. each different parameter retrieves the value of the select option menu-->
+
+										    	</div>
+
+										        <div id="set2">
+											 
+											        <select id="grains" class="menu"><!--grains dropdown-->
+											        	
+											        	<option>Grain</option><option>Bagels</option><option>White Bread</option><option>Whole Wheat Bread</option><option>Tortillas</option><option>Pasta</option><option>Granola</option><option>Rice</option><option>Ramen</option><option>Buns</option>
+
+											        </select>
+										        
+										        	<button class="button is-success is-outlined is-small" onclick="addTo(5)">Add
+										        	</button><!--executes the 5th parameter of addto() function. each different parameter retrieves the value of the select option menu-->
+
+										    	</div>
+
+										        <div id="set3">
+											 
+											        <select id="condiments" class="menu">
+											        	
+											        	<option>Condiments</option><option>Ketchup</option><option>Mustard</option><option>Gravy</option><option>Mayonnaise</option><option>Salsa</option><option>Guacamole</option><option>Relish</option><option>Peanut Butter</option><option>Ranch Dressing</option><option>Soy Sauce</option><option>Nutella</option><option>Vinegar<option>Steak Sauce</option></option>
+
+											        </select>
+										       
+										        	<button class="button is-success is-outlined is-small" onclick="addTo(6)">Add
+										        	</button><!--executes the 6th parameter of addto() function. each different parameter retrieves the value of the assoiciated select option menu-->
+
+										    	</div>
+
+											</div>
+
+											<div id="dropContain2"><!--div for the 3rd row of dropdown menus-->
+
+									    		<div id="set1">
+											 
+											        <select id="seasoning" class="menu">
+											        	
+											        	<option>Seasoning</option><option>Allspice</option><option>Sugar</option><option>Salt</option><option>Black Pepper</option><option>Basil</option><option>Cayenne</option><option>Cumin</option><option>Rosemary</option><option>Saffron</option><option>Mushrooms</option>Vanilla Extract
+
+											        </select>
+
+										       		<button class="button is-success is-outlined is-small" onclick="addTo(7)">Add
+										       		</button><!--executes the 7th parameter of addto() function. each different parameter retrieves the value of the select option menu-->
+
+										    	</div>
+
+										        <div id="set2">
+											 
+											        <select id="sweets" class="menu">
+											        	
+											        <option>Sweets</option><option>Kit Kat</option><option>Oreos</option><option>Jello</option><option>Marshmallows</option><option>Chocolate</option><option>Skittles</option>
+
+											        </select>
+
+										        	<button class="button is-success is-outlined is-small" onclick="addTo(8)">Add
+										        	</button><!--executes the 8th parameter of addto() function. each different parameter retrieves the value of the select option menu-->
+
+										    	</div>
+
+										        <div id="set3">
+											 
+											        <select id="seafood" class="menu">
+											        	
+											        	<option>Seafood</option><option>Tuna</option><option>Catfish</option><option>Clams</option><option>Cod</option><option>Crab</option><option>Salmon</option><option>Swordfish</option><option>Shrimp</option><option>Squid</option><option>Fish Eggs</option>
+
+											        </select>
+
+										        	<button class="button is-success is-outlined is-small" onclick="addTo(9)">Add
+										        	</button><!--executes the 9th parameter of addto() function. each different parameter retrieves the value of the select option menu-->
+
+										    	</div>
+
+											</div>
+
+									    </div>
+
+
+									    <div id="TblBtns"> <!--bottom half of input card (buttons and tables)-->
+									    	
+									    	<div>
+									    		
+									    		<table id="Table" cellspacing="0">
+
+												    <tr>
+												        
+												        <th style="width:80px">Basket</th> <!--table title-->
+												        
+												    </tr>
+												</table><br>
+
+												<div id="fillerText">None
+
+												</div>
+
+												<table  id="Table1" cellspacing="0">
+
+												    <tr>
+												        <th>&nbsp;</th><!--empty table rows. rows are added depending on input-->
+												        <th style="width:80px"></th>
+												        
+												    </tr>
+												    
+												</table>
+
+									    	</div>
+
+
+									    	<!--setting the 3 different buttons that control the basket-->
+
+									    	<div id="btns">
+
+									    		<button class="button is-success is-outlined is-small" onclick="removeItem()">Remove Ingredient <!--checkbox removes ingredient from list-->
+									    			<i id="icon" class="fa fa-minus-circle"></i>
+												</button>
+
+									    		<div id="searchcontain">
+
+									    			<button class="button is-success is-outlined is-small" onclick="goSearch2()">Search for Recipe  <!-- "submit" button of the page; allows you to search for a recipe-->
+									    				<i id="icon" class="fa fa-search-plus"></i>
+									    			</button>
+
+									    		</div>
+									    		
+									    		<button class="button is-success is-outlined is-small" onclick="clearIngredients()">Empty Basket<!--completely emptying ingredient array-->
+									    			<i id="icon" class="fa fa-shopping-basket"></i>
+									    		</button>
+
+									    	</div>
+
+
+									    </div>
+
+									  </div>
+									
+								</div>
+
+						  </div>
+
+						  		
+
+
+						  <div class="Fresults"><!--search results card/div; right side of the program-->
+						  	
+
+						  		<div class="card">
+
+									  <header class="card-header">
+									    <p class="card-header-title has-text-success">
+									    	<!--card title-->
+									      Search Results
+									      <i class="fas fa-list-alt" id="icon"></i>
+									    </p>
+									  </header>
+
+									  <div class="card-content">
+
+									    <div class="content">
+									    	<!--card caption-->
+									      We've searched our database and this is what we found as your healthiest option. You will be able to view in-depth data and information necessary for preparing the meal.
+									     
+
+									      <div class="info1">
+									      	
+									      	<div class="recipeImg" id="image"><!--creating a filler image before user selects enter-->
+									      		
+									      	</div>
+
+		  									<!--7 empty text divs that display fetched data for associated recipe-->
+
+		  									<div class="infoRight">
+
+		  										<h3 class="has-text-success" id="recipeName">Recipe Name</h3>
+
+		  										<h5 class="has-text-success is-size-6 has-text-weight-bold" id="Nscore">Nutrition Score:</h5>
+		  										
+		  										<h5 class="has-text-success is-size-6 has-text-weight-light" id="time">Preparation Time</h5>
+
+		  										<h5 class="has-text-success is-size-6 has-text-weight-light" id="difficulty">Difficulty</h5>
+
+		  										<h5 class="has-text-success is-size-6 has-text-weight-light" id="calories">Calories</h5>
+
+		  										<h5 class="has-text-success is-size-6 has-text-weight-light is-capitalized" id="diets">Diets</h5>
+
+		  										<h5 class="has-text-success is-size-6 has-text-weight-light" id="cuisine">Cuisine</h5>
+		  										
+		  									</div>
+
+									      </div>
+
+									    </div>
+
+									  </div>
+
+									  <footer class="card-footer">
+
+									  		<!--creating bottom footer buttons of the results card that allow you to visit the recipe's instructions page and view more data on click--> 
+									  		
+										    <a id="link" href="" class="card-footer-item has-text-success">View Recipe Steps <i class="fas fa-link" id="icon"></i>
+										    </a>
+										    <a href="#" class="card-footer-item">
+										    </a>
+										    <a class="card-footer-item has-text-success modal-button" data-target = "#modal">View More<i id="icon" class="fas fa-plus"></i></a><!--data-target allows you to see popup of modal onclick-->
+
+			 						  </footer>
+									  
+								</div>
+
+						  </div> 
+					</div>
+
+				</div>
+
+
+			</div>
+
+	    </div>
+
+		<!--popup/modal container taken from bulma io-->
+	   <div id="popcon">
+
+      	  <section class = "section" id="popup">
+
+         	<div class = "container">
+
+         		<div id = "modal" class = "modal">
+
+               		<div class = "modal-background"></div>
+
+               		<div class = "modal-content">
+
+	                    <div class="modal-card">
+
+						    <header class="modal-card-head">
+						      <p class="modal-card-title has-text-weight-bold has-text-success" id="poptitle"></p>
+						    </header>
+
+		   					<section class="modal-card-body">
+
+		   						<!--creating empty divs in modal for api fetched data to be inputted-->
+		    					<p class="has-text-weight-bold" id="popUpContent">Summary<br><br></p><!--summary div-->
+
+		    					<div id="popUpContent"><div id="summary"></div></div><br><br>
+								<p class="has-text-weight-bold" id="popUpContent">Nutritional Info (13 Most Prevalent Nutrients)<br><br></p> <!--nutrient progress bar containers-->
+
+		    					<div id="nutrientInfo" class="is-success"></div>
+		    					<br><br><p class="has-text-weight-bold" id="popUpContent">Ingredient Info<br><br></p>
+
+		    					<div id="popUpContent">
+		    						<div class="field is-grouped is-grouped-multiline" id="ingredientInfo"><!--ingredient List container-->
+
+							    	</div>
+							    </div>
+
+		    					<div id="notusedIngredients"><!--div to display any unused ingredients-->
+		    						<p class="has-text-weight-bold" id="popUpContent">Unused Ingredients<br><br></p>
+		    						<div id="ingredList"class="tags">
+		    						</div>
+		    					</div>
+		    					<!-- div to display other recipes that were searched with the same ingredient query--> 
+		    					<br><br><p class="has-text-weight-bold" id="popUpContent">Other Options with your Preferred Ingredients<br><br></p>
+
+		    					<div id="scoreTitle">Recipe (Nutrition Score)<br><br></div><!--search results subtitle-->
+
+		    					<div id="otherRecipe" class="is-capitalized"></div>
+		     
+		   					</section>
+
+	  					</div>
+               
+               		</div>
+               		<!--close button for popup/modal-->
+               		<button class = "modal-close is-large" aria-label = "close"></button>
+            	</div>
+         </div>
+
+      </section>
+
+  	</div>
+    <!--divs essential for script program. they print important data that needs to be set as a variable-->
+    <div id="testdivs">
+
+	    <div id="output"></div>
+	    <div id="name"></div>
+	    <div id="working"></div>
+	    <div id="recNames"></div>
+		<div id="healthyFood"></div>
+	
 	</div>
 
-</div>
-<div id="popcon">
-
-      <section class = "section" id="popup">
-         <div class = "container">
-
-         	
-
-            <div id = "modal" class = "modal">
-               <div class = "modal-background"></div>
-               <div class = "modal-content">
-
-                  
-                     <div class="modal-card">
-    <header class="modal-card-head">
-      <p class="modal-card-title has-text-weight-bold has-text-success" id="poptitle"></p>
-    </header>
-    <section class="modal-card-body">
-    	<p class="has-text-weight-bold" id="ingredientContain">Summary<br><br></p>
-    	<div id="ingredientContain"><div id="summary"></div></div><br><br>
-
-    	<p class="has-text-weight-bold" id="ingredientContain">Nutritional Info<br><br></p>
-
-    	<div id="nutrientInfo" class="is-success">
-    		
-    			
-
-    	</div>
-    	<br><br> <p class="has-text-weight-bold" id="ingredientContain">Ingredient Info<br><br></p>
-    	<div id="ingredientContain"><div class="field is-grouped is-grouped-multiline" id="ingredientInfo">
-
-    	</div></div>
-
-    	<div id="notusedIngredients">
-    		<p class="has-text-weight-bold" id="ingredientContain">Unused Ingredients<br><br></p>
-    		<div id="ingredList"class="tags">
-    			
-
-    		</div>
-    		
-
-    	</div>
-    	<br><br><p class="has-text-weight-bold" id="ingredientContain">Other Options with your Preferred Ingredients<br><br></p>
-    	<div id="subtitle">Recipe (Nutrition Score)<br><br></div><div id="otherRecipe" class="is-capitalized">
-    		
-
-
-    	</div>
-      <!-- Content ... -->
-    </section>
-  </div>
-               
-               </div>
-               <button class = "modal-close is-large" aria-label = "close"></button>
-            </div>
-         </div>
-      </section></div>
-      <div id="testdivs">
-
-      <div id="output"></div>
-    <div id="name"></div>
-    <div id="working"></div>
-     <div id="recNames"></div>
-
-
-<div id="sample"></div></div>
-
-  		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  		<script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!--referencing jquery-->
+  		<script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script><!--referencing data-aos library-->
   		
 	</body>
 
 	<script>
-mylist = []
 
-function removeItem(){
-    var grid = document.getElementById("Table1");
+		//creating array of empty ingredients that the user will push()
+		ingredients = []
+
+		//function uses query to remove checkboxed item from table 
+		function removeItem(){
+
+			//setting variable for table
+		    var ingredientTable = document.getElementById("Table1");
+		 
+		        //Reference the CheckBoxes in Table.
+		    var checkBoxes = ingredientTable.getElementsByTagName("INPUT");
+		    var ingredient = "";
+		 
+		        //Loop through the CheckBoxes to find selected checkboxes
+		    for (var i = 0; i < checkBoxes.length; i++) {
+
+		         if (checkBoxes[i].checked) { 
+
+		            var row = checkBoxes[i].parentNode.parentNode;
+		            ingredient = row.cells[1].innerHTML; 
+		            //indexing and getting name of selected ingredient to be deleted from ingredient list
+		            //deletes the row with the checked ingredient
+		            ingredientTable.deleteRow(i)
+		            console.log(ingredient)
+
+		            //embedded if statement
+
+		            if (ingredients.includes(ingredient)){
+
+		            	//only deletes ingredient if it is found in list of ingredients 
+		                var ingredientIndex = ingredients.indexOf(ingredient)
+		                ingredients.splice(ingredientIndex, 1);
+		                console.log(ingredients)
+		            }
+
+		              
+		                
+		          }
+		    }
+		}
+
+		function clearIngredients(){//clear the entire ingredient list and table/basket
+
+			console.log(ingredients)
+
+			//variable set for table
+			var ingredientTable = document.getElementById("Table1")
+
+			var ingredientTablelength = ingredients.length
+			for (deleterow = 0;deleterow<ingredientTablelength;deleterow++){
+				ingredientTable.deleteRow(0)
+				//for loop that deletes the first row (index of 0) of ingredients for the amount of rows that are in the recipe 
+				//(deletes the entire table)
+			}
+			ingredients=[] //setting ingredient array as empty 
+			console.log(ingredients)
+		}
+
+		//modularized function to add selected ingredient in dropdown menus to ingredient list
+
+		function addTo(DropDownNumber){
+
+			//parameter that changes depending on the number of the dropdown menu. e.g. each one has its own number from 1-9
+
+			document.getElementById("fillerText").style.display = "none";
+
+			//DOM JS property to display 3 essential buttons (all in btns div) once any ingredient is added
+
+			document.getElementById("btns").style.display = "block";
+
+
+			var ingredientTable = document.getElementById("Table1");
+
+			//insertRow(0) is the lowest row in rable
+
+		    var row = ingredientTable.insertRow(0);
+		    var checkboxCell = row.insertCell(0);
+		    var ingredientCell = row.insertCell(1);
+
+		    //embedded modularzed function with 2 parameters
+
+		    //dropTitle and foodFamily identifies the dropdown menu that is currently being used by the user
+
+		    function addRow(dropTitle, foodFamily){
+
+		    	//setting variable for the selected dropdown (e.g. produce)
+
+				var response = document.getElementById(dropTitle);
+				//setting var for selected ingredient in the dropdown
+				var selectedIngredient = response.options[response.selectedIndex].text;
+
+				//error handling for already existing ingredient
+				if (ingredients.includes(selectedIngredient)){
+					alert("You have already selected this Ingredient")
+				}
+				//error handing to ensure the user selects an actual ingredient and not the "filler" opt for the dropdown
+				else if (selectedIngredient == foodFamily){
+					alert("Please Select an Actual Ingredient")
+				}
+				//set maximum ingredients that can be added to 10
+				else if (ingredients.length == 10){
+					alert("You have reached the maximum of ingredients")
+				}
+				//if no errors, proceed to add ingredient to HTML table
+				else{
+					ingredientCell.innerHTML = selectedIngredient;
+					checkboxCell.innerHTML = "<input type='checkbox' value='1' name='box'/>";
+					ingredients.push(selectedIngredient)
+				}
+				
+			}
+			
+			//specifying parameter actions for each dropdown in the function addRow()
+			if (DropDownNumber == 1){
+
+				//calling function addrow with the parameters of the produce, dairy, beverages, etc dropdown
+
+			addRow("produce","Produce")
+			}
+			else if (DropDownNumber == 2){
+				addRow("dairy","Dairy")	
+			}
+			else if (DropDownNumber == 3){
+				addRow("beverages","Beverages")	
+			}
+			else if (DropDownNumber == 4){
+				addRow("meat","Meat")		
+			}
+			else if (DropDownNumber == 5){
+				addRow("grains","Grain")		
+			}
+			else if (DropDownNumber == 6){
+				addRow("condiments","Condiments")		
+			}
+			else if (DropDownNumber == 7){
+				addRow("seasoning","Seasoning")		
+			}
+			else if (DropDownNumber == 8){
+				addRow("sweets","Sweets")		
+			}
+			else if (DropDownNumber == 9){
+				addRow("seafood","Seafood")
+			}
+		}
+				
+
+				
+		//aos animation duration function
+		AOS.init({
+		  duration: 1600,
+		})
+
+
+		//js code taken from bulma io to close the modal/popup using an X button
+		$(".modal-button").click(function() {
+		    var target = $(this).data("target");
+		    $("html").addClass("is-clipped");
+		    $(target).addClass("is-active");
+		 });
+		         
+		 $(".modal-close").click(function() {
+		    $("html").removeClass("is-clipped");
+		    $(this).parent().removeClass("is-active");
+		 });
+
+
+
+
+
+		//async (promise based behavior) function to search for recipes with the selected ingredients
+		async function IngredientSearch(url, CallNumber){ //parameters for each time the API is called
+
+		    recipeList = [] //setting empty array for ids of found recipes
+		          
+		    scoreList = []//setting empty array for nutrition score of each found recipe
+
+
+		    //formatting the ingredient list to match the query used in the API url (each ingredient is separated by ,+)
+		    var formattedIngredientList = ingredients.join(",+")
+		    
+		    
+
+		    
+		    await fetch(url) //(http) requesting data using my api key
+		    .then((res) => res.json()) // converting data to json
+		    .then(async(output) => {
+
+		            var data = output;
+		            
+		            mealNameScore = [] //empty array used to store the nutrition score and name of each found recipe
+
+		            if (CallNumber == 1){ //specifying call number parameter
+		            	console.log(data)
+
+		            	//for loop to identify all 10 recipes found from API with user inputted ingredients
+			            for (recipe in data){
+
+			            	var recName2 = data[recipe]["title"] //finds recipe name
+			                var recipeIndex = data.indexOf(data[recipe]) 
+
+			                //creates a variable for the index of each found recipe (usually there are 10 search results)
+
+			                var meal = data[recipe]["id"] //id is numerical code of each recipe
+			              
+			                recipeList.push(meal) //adding the ids to a list of recipes
+			               
+			                //subsequent fetch to find nutrition info of each recipe in search results. Goal is to create a nutrition score for each recipe
+
+			                await fetch("https://api.spoonacular.com/recipes/"+meal+"/nutritionWidget.json?apiKey="+apikey)
+
+			                .then((res) => res.json()) // converting data to json
+			                .then(output => {
+
+			                var data1 = output;
+			                console.log(data1)
+
+			                //setting variables for set of data of "good nutrients" (e.g. protein, vitamins, etc)
+
+			                var goodNutrients = data1['good']
+
+			                //setting int variable that will altered in for loop (sum of nutrient quantities e.g. 10g protein)
+			                nutrientsum=0
+
+			                //number of good nutrients
+			                var numNutrients = goodNutrients.length
+
+			                for (nutrient=0; nutrient<numNutrients; nutrient++){
+
+			                    percentValue = goodNutrients[nutrient]["percentOfDailyNeeds"]
+			                    nutrientsum = nutrientsum + percentValue;
+			                    //adding the percent value of each nutrient to a nutrient sum
+			            	}
+
+			            	//NUTRITION SCORE CALCULATION (averaging percent of daily value of each nutrient)
+
+				            var NutritionValue = nutrientsum/numNutrients //dividing sum of all % values by number of nutrients
+
+				            //sample calc: protein: 77% of daily value, vitamin a: 90% of daily value, vitamin b: 110% of daily value
+				            //nutrition score = 77+90+110/3
+				            var finalScore = Math.round(NutritionValue) //round to nearest integer for nutrition score
+				            console.log(finalScore);
+				            scoreList.push(finalScore) //adding all nutrition scores to an array
+
+
+				            var mealSummary = recName2 + " ("+finalScore+")"
+				            mealNameScore.push(mealSummary) //adding each recipe's nutrition score and name to an array
+				           
+			            
+			                
+			                
+			                 })
+			            
+			                
+
+			            }
+		            
+		            	
+
+
+			            var bestNutrition = Math.max(...scoreList) //finding the highest nutrition score of all search results
+			            console.log(bestNutrition)
+			            var indexNum = scoreList.indexOf(bestNutrition) //finding index num of best nutrition score in its list
+			            var BestFood = recipeList[indexNum] // using index to identify the recipe with the best nutrition score. This is the recipe shown to the users on the results tab
+
+			            document.getElementById("healthyFood").innerHTML = BestFood
+
+
+
+
+
+
+			            if (bestNutrition>125){ //classifying how healthy the healthiest recipe is based on nutrition score
+			            	document.getElementById("Nscore").innerHTML = "Nutrition Score: " + bestNutrition +" (Extremely Healthy)";
+
+			            }
+			            else if (bestNutrition>75){
+			            	document.getElementById("Nscore").innerHTML = "Nutrition Score: " + bestNutrition+" (Very Healthy)";
+			            }
+			            else if (bestNutrition>35){
+			            	document.getElementById("Nscore").innerHTML = "Nutrition Score: " + bestNutrition+" (Moderately Healthy)";
+			            }
+			            else{
+			            	document.getElementById("Nscore").innerHTML = "Nutrition Score: " + bestNutrition+" (Not Healthy)";
+			            }
+
+			            unusedList = [] //empty array of unused ingredients
+
+			            if (data[indexNum]["unusedIngredients"].length > 0){ //checking whether the displayed recipe has any unused ingredients
+			            	notUsed = data[indexNum]["unusedIngredients"]
+			            	document.getElementById("notusedIngredients").style.display = "block"; //creating a div of unused ingredients
+
+			            	for (i =0;i<notUsed.length;i++){ //formatting all unused ingredients to be printed as tag
+
+			            		unusedfood = notUsed[i]["name"]
+			            		var tagString = "<span class='tag is-success'>"+unusedfood+"</span>"
+			            		unusedList.push(tagString)
+			            		
+			            	}
+
+			            	document.getElementById("ingredList").innerHTML = unusedList.join(" ") //adding all unused ingredients to div as bulma tag
+			            }
+
+			            document.getElementById("otherRecipe").innerHTML = mealNameScore.join(" <br> ")
+
+			            
+			            //printing the healthiest recipe's id to document
+
+			           
+
+			        }
+
+			        else if (CallNumber == 2){ 
+
+			        //specifications for new call number (new API url). this callnumber finds recipe information of only the healthiest recipe ("BestFood") based off the previously calculated nutrition score
+
+			        	var recName = data['title']
+			        	document.getElementById("recNames").innerHTML = recName 
+
+			        	//printing name of healthiest recipe to the page
+			            
+			            document.getElementById("recipeName").innerHTML = recName;
+		                document.getElementById("poptitle").innerHTML = recName;
+			            //using JS DOM to print preparation time to result card
+			            document.getElementById("time").innerHTML = "Preparation Time: " + data["readyInMinutes"] + " minutes"
+
+			            //error handling if data for number of steps is not available for a specific recipe
+			            if (data["analyzedInstructions"].length == 0){
+			            	document.getElementById("difficulty").innerHTML = "Difficulty: Could not find data"
+			            }
+			            else{
+
+			            	var steps = data["analyzedInstructions"][0]["steps"].length
+			            	if (steps>15){ //classifying a recipe as difficult if it needs 15 steps or more to complete
+			            		document.getElementById("difficulty").innerHTML = "Difficulty: Experienced Chef (Hard)"
+			           		}
+			           		else if (steps>5){//classifying a recipe as intermediate if it needs 5 steps or more to complete
+			           			document.getElementById("difficulty").innerHTML = "Difficulty: Intermediate Chef (Medium)"
+			           		}
+			           		else { //classifying a recipe as easy if it needs less than 5 steps to complete
+			           			document.getElementById("difficulty").innerHTML = "Difficulty: Beginner Chef (Easy)"
+			           		}
+			            }
+			           
+
+			            recipeLink = data["sourceUrl"]
+			            document.getElementById("link").href = recipeLink; //identifying the link to the recipe's instructions website.
+
+			            document.getElementById("diets").innerHTML = "Diets: " + data["diets"].join(", ") //printing the recipe's diets to result div
+		                document.getElementById("cuisine").innerHTML = "Cuisine: "+ data["cuisines"].join(", ") //printing the recipe's cuisines to result div
  
-        //Reference the CheckBoxes in Table.
-    var checkBoxes = grid.getElementsByTagName("INPUT");
-    var message = "";
- 
-        //Loop through the CheckBoxes.
-    for (var i = 0; i < checkBoxes.length; i++) {
-         if (checkBoxes[i].checked) {
-            var row = checkBoxes[i].parentNode.parentNode;
-            message = row.cells[1].innerHTML;
-            grid.deleteRow(i)
-            console.log(message)
-            if (mylist.includes(message)){
-                var ingredientIndex = mylist.indexOf(message)
-                mylist.splice(ingredientIndex, 1);
-                console.log(mylist)
-            }
+		                if (data["cuisines"].length == 0){ //error checking: determining whether the recipe has an assigned cuisine. If it doesn't, print "none" to the results div
+		                	document.getElementById("cuisine").innerHTML = "Cuisine: None" 
+		                 }
 
-              
-                
-            }
-        }
-}
+		                 //identifying the image src of the recipe's image
+			            var ImageURL = data['image']
+			            //presenting the image of the recipe to the screen
+			            document.getElementById("image").innerHTML = "<img id='foodimg' src="+ImageURL+">" 
+			            document.getElementById("image").style.backgroundColor= "white";
+			            document.getElementById("image").style.height= "220px";
+			            document.getElementById("image").style.paddingRight= "20px";
+			            //printing recipe summary to UI
+			            document.getElementById("summary").innerHTML = data["summary"]
+			        }
 
-function clearIngredients(){
-	console.log(mylist)
-	var table = document.getElementById("Table1")
+		       		
+		        	else if (CallNumber == 3){
 
-	var tablelength = mylist.length
-	for (deleterow = 0;deleterow<tablelength;deleterow++){
-		table.deleteRow(0)
-	}
-	mylist=[]
-	console.log(mylist)
-}
-function addTo(DropDownNumber){
+			        	nutrientInfoList = [] 
+			            document.getElementById("calories").innerHTML = "Calories: " + data["calories"] //printing the calories of the recipe to the screen
+			           	var goodNutrients = data['good']
+			           	var pBarclass = "is-success is-large" //setting a variable for the div class of a progress bar I will place onto the popup
+			            	
+			            for (nutrients=0;nutrients<13;nutrients++){ //for loop that prints 13 progress bars to the screen on nutrient quantities
+			           		var nutrientName = goodNutrients[nutrients]['title'] //identifying all "good" nutrients
+			           		var amount = goodNutrients[nutrients]['amount'] //identifying quantity of nutrient in a recipe
+			           		var dailyValue = Math.round(goodNutrients[nutrients]['percentOfDailyNeeds']) //identifying percent of daily value of each nutrient
+			           		var datastring = nutrientName+" ("+amount+")<br><div class='pContain'>Percent of Daily Value: "+dailyValue+"%<progress class='"+pBarclass+"' value='"+dailyValue+"' max ='100'>"+dailyValue+"</progress></div>"  //variable used to print a progress bar for each nutrient using HTML syntax
+			            		
+			          		nutrientInfoList.push(datastring); //adding each progress bar string to a list
+			        	
+			        	}
 
-	
-	document.getElementById("fillerText").style.display = "none";
+			        	document.getElementById("nutrientInfo").innerHTML = "The following data points are all statistics on the quantity of each good nutrient in the recipe. They are all expressed as a percent of Daily Value or as a ratio of your required amount each day (Percent of Daily Value). In essense, the higher the value, the healthier the dish. <br><br>" + nutrientInfoList.join("<br>") //printing each of the 13 progress bars to the screen 
+			   		}
 
-	document.getElementById("btns").style.display = "block";
+			
+			        else if (CallNumber == 4){ //callnumber that identifies ingredients in a recipe
 
-	var table = document.getElementById("Table1");
-    var row = table.insertRow(0);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
+			        	
 
-    function addRow(dropTitle, foodFamily){
-		var response = document.getElementById(dropTitle);
-		var f = response.options[response.selectedIndex].text;
-		if (mylist.includes(f)){
-			alert("You have already selected this Ingredient")
+			            ingredientList = [] 
+			           	foodList = data["ingredients"] //variable for all ingredients in a recipe
+			           	for (food=0;food<foodList.length;food++){ //for loop iterates through ingredients and prints each using a CSS tag 
+			           		var ingredientName = foodList[food]["name"]; //identifying each ingredient name
+			           		var amount = Math.round(foodList[food]["amount"]["metric"]["value"]) + " " + foodList[food]["amount"]["metric"]["unit"]; //identifying amount of each ingredient
+
+			           		//string that follows HTML syntax to print a tag containing each ingredient
+			           		var ingredientString = "<div class='tags has-addons px-1'><span class='tag'>"+amount+"</span><span class='tag is-success'>"+ingredientName+"</span></div>"
+			            		ingredientList.push(ingredientString)
+			            }
+			        
+			            document.getElementById("ingredientInfo").innerHTML = ingredientList.join(" ")
+			        	
+			        }
+
+		          
+
+
+		    })
+
 		}
-		else if (f == foodFamily){
-			alert("Please Select an Actual Ingredient")
+		    
+
+
+		async function goSearch2() //function that executes previous modular function using different parameters and API urls
+
+		{
+
+			if (ingredients.length == 0){ //error checking to see if the user has actually inputted an ingredient
+				alert("Please Select an Ingredient")
+				return
+			}
+
+		    apikey = '1e4ac0fc6eff4598a34767b5a6ffaa14' 
+		    var formattedIngredientList = ingredients.join(",+") //formatting ingredient list to be used later in a query for my API. To search by ingredient, I need to separate each by a (+) and a (,)
+
+		    url1 = "https://api.spoonacular.com/recipes/findByIngredients?apiKey="+apikey+"&ingredients="+formattedIngredientList;
+		    await IngredientSearch(url1, 1); //first callnumber finds recipes by ingredients
+
+
+		    foodname = document.getElementById("healthyFood").innerHTML //variable that identifies the healthiest recipe's id rhat was printed to the page. This is needed to be used in the next http request
+
+
+		    url2 = "https://api.spoonacular.com/recipes/"+foodname+"/information?apiKey="+apikey;
+		    await IngredientSearch(url2, 2); //second call number fetches general information on a recipe
+
+
+
+		    url3 = "https://api.spoonacular.com/recipes/"+foodname+"/nutritionWidget.json?apiKey=1e4ac0fc6eff4598a34767b5a6ffaa14";
+		    await IngredientSearch(url3, 3) //third call number finds all nutritional information for the healthiest recipe
+
+
+		    
+		    url4 = "https://api.spoonacular.com/recipes/"+foodname+"/ingredientWidget.json?apiKey=1e4ac0fc6eff4598a34767b5a6ffaa14";
+		    await IngredientSearch(url4, 4) //fourth call number fetches data on similar recipes 
 		}
-		else if (mylist.length == 10){
-			alert("You have reached the maximum of ingredients")
-		}
-		else{
-			cell2.innerHTML = f;
-			cell1.innerHTML = "<input type='checkbox' value='1' name='box'/>";
-			mylist.push(f)
-		}
-		
-	}
-	
-
-	if (DropDownNumber == 1){
-		addRow("produce","Produce")
-	}
-	else if (DropDownNumber == 2){
-		addRow("dairy","Dairy")	
-	}
-	else if (DropDownNumber == 3){
-		addRow("beverages","Beverages")	
-	}
-	else if (DropDownNumber == 4){
-		addRow("meat","Meat")		
-	}
-	else if (DropDownNumber == 5){
-		addRow("grains","Grain")		
-	}
-	else if (DropDownNumber == 6){
-		addRow("condiments","Condiments")		
-	}
-	else if (DropDownNumber == 7){
-		addRow("seasoning","Seasoning")		
-	}
-	else if (DropDownNumber == 8){
-		addRow("sweets","Sweets")		
-	}
-	else if (DropDownNumber == 9){
-		addRow("seafood","Seafood")
-	}
-}
-		
-
-		
-
-			AOS.init({
-  duration: 1600,
-})
-
- $(".modal-button").click(function() {
-            var target = $(this).data("target");
-            $("html").addClass("is-clipped");
-            $(target).addClass("is-active");
-         });
-         
-         $(".modal-close").click(function() {
-            $("html").removeClass("is-clipped");
-            $(this).parent().removeClass("is-active");
-         });
-
-
-
-
-List = []
-
-
-async function IngredientSearch(url, CallNumber){
-    recipeList = []
-          
-    scoreList = []
-
-    var final = mylist.join(",+")
-    console.log(final)
-    
-
-    
-    await fetch(url) //requesting the recipe information by id using my api key
-        .then((res) => res.json()) // converting data to json
-        .then(async(output) => {
-            var data = output;
-            console.log(data); //printing all data for recipe into console
-            allmeals = []
-            if (CallNumber == 1){
-
-            //ecipeMaster2 = []
-            
-            for (recipe in data){
-            	var recName2 = data[recipe]["title"]
-                var recipeIndex = data.indexOf(data[recipe])
-                var meal = data[recipe]["id"]
-                console.log(meal)
-              
-                recipeList.push(meal)
-               
-                
-                await fetch("https://api.spoonacular.com/recipes/"+meal+"/nutritionWidget.json?apiKey="+apikey)
-
-                .then((res) => res.json()) // converting data to json
-                .then(output => {
-                var data1 = output;
-                console.log(data1)
-                var goodNutrients = data1['good']
-                sum=0
-                var numNutrients = goodNutrients.length
-
-                for (nutrient=0; nutrient<goodNutrients.length; nutrient++){
-                    percentValue = goodNutrients[nutrient]["percentOfDailyNeeds"]
-                    sum = sum + percentValue;
-            }
-
-            var NutritionValue = sum/numNutrients
-            var finalScore = Math.round(NutritionValue)
-            console.log(finalScore);
-            scoreList.push(finalScore)
-            var mealSummary = recName2 + " ("+finalScore+")"
-            allmeals.push(mealSummary)
-            //var Recipeinfo2 = recName2 + " (" + finalScore + ")"
-            //recipeMaster2.push(Recipeinfo2)
-            
-                
-                
-                 })
-            
-                
-
-            }
-            
-            document.getElementById("otherRecipe").innerHTML = allmeals.join(" <br> ")
-            console.log(recipeList)
-            console.log(scoreList)
-            var best = Math.max(...scoreList)
-            console.log(best)
-            var indexNum = scoreList.indexOf(best)
-            var BestFood = recipeList[indexNum]
-            unusedList = []
-            if (data[indexNum]["unusedIngredients"].length > 0){
-            	notUsed = data[indexNum]["unusedIngredients"]
-            	document.getElementById("notusedIngredients").style.display = "block";
-
-            	for (i =0;i<notUsed.length;i++){
-            		unusedfood = notUsed[i]["name"]
-            		var tagString = "<span class='tag is-success'>"+unusedfood+"</span>"
-            		unusedList.push(tagString)
-            		//<span class="tag is-success">Success</span>
-            	}
-            	document.getElementById("ingredList").innerHTML = unusedList.join(" ")
-            }
-            document.getElementById("sample").innerHTML = BestFood
-            if (best>125){
-            	document.getElementById("Nscore").innerHTML = "Nutrition Score: " + best +" (Extremely Healthy)";
-
-            }
-            else if (best>75){
-            	document.getElementById("Nscore").innerHTML = "Nutrition Score: " + best+" (Very Healthy)";
-            }
-            else if (best>35){
-            	document.getElementById("Nscore").innerHTML = "Nutrition Score: " + best+" (Moderately Healthy)";
-            }
-            else{
-            	document.getElementById("Nscore").innerHTML = "Nutrition Score: " + best+" (Not Healthy)";
-            }
-
-        }
-
-        else if (CallNumber == 2){
-
-        	var recName = data['title']
-        	document.getElementById("recNames").innerHTML = recName
-        	console.log(recName)
-                List.push(recName)
-                var allRecent = List.join(" <br> ")
-                document.getElementById("recipeName").innerHTML = recName;
-                 document.getElementById("poptitle").innerHTML = recName;
-                
-            	document.getElementById("time").innerHTML = "Preparation Time: " + data["readyInMinutes"] + " minutes"
-            	if (data["analyzedInstructions"].length == 0){
-            		document.getElementById("difficulty").innerHTML = "Difficulty: Could not find data"
-            	}
-            	else{
-            		var steps = data["analyzedInstructions"][0]["steps"].length
-            	if (steps>15){
-            		document.getElementById("difficulty").innerHTML = "Difficulty: Experienced Chef (Hard)"
-            	}
-            	else if (steps>5){
-            		document.getElementById("difficulty").innerHTML = "Difficulty: Intermediate Chef (Medium)"
-            	}
-            	else {
-            		document.getElementById("difficulty").innerHTML = "Difficulty: Beginner Chef (Easy)"
-            	}
-
-            	}
-            	
-
-
-                //Name = document.getElementById("recipeName");
-                //Name.innerHTML = data["title"]
-                recipeLink = data["sourceUrl"]
-                console.log(recipeLink)
-                document.getElementById("link").href = recipeLink;
-                document.getElementById("diets").innerHTML = "Diets: " + data["diets"].join(", ")
-                document.getElementById("cuisine").innerHTML = "Cuisine: "+ data["cuisines"].join(", ")
-                if (data["cuisines"].length == 0){
-                	document.getElementById("cuisine").innerHTML = "Cuisine: None"
-                }
-               var ImageURL = data['image']
-               console.log(ImageURL)
-               document.getElementById("image").innerHTML = "<img id='foodimg' src="+ImageURL+">"
-               document.getElementById("image").style.backgroundColor= "white";
-               document.getElementById("image").style.height= "220px";
-               document.getElementById("image").style.paddingRight= "20px";
-               document.getElementById("summary").innerHTML = data["summary"]
-        }
-        else if (CallNumber == 3){
-
-        }
-        else if (CallNumber == 4){
-
-        	nutrientInfoList = []
-            	document.getElementById("calories").innerHTML = "Calories: " + data["calories"]
-            	var goodNutrients = data['good']
-            	var pBarclass = "is-success is-large"
-
-            	
-            	for (nutrients=0;nutrients<13;nutrients++){
-            		var nutrientName = goodNutrients[nutrients]['title']
-            		var amount = goodNutrients[nutrients]['amount']
-            		var dailyValue = Math.round(goodNutrients[nutrients]['percentOfDailyNeeds'])
-            		var datastring = nutrientName+" ("+amount+")<br><div class='pContain'>Percent of Daily Value: "+dailyValue+"%<progress class='"+pBarclass+"' value='"+dailyValue+"' max ='100'>"+dailyValue+"</progress></div>"
-            		
-            		nutrientInfoList.push(datastring);
-        	
-        }
-
-        document.getElementById("nutrientInfo").innerHTML = "The following data points are all statistics on the quantity of each good nutrient in the recipe as a percent of your required amount for that nutrient each day(Percent of Daily Value). In essense, the higher the value, the healthier the dish. <br><br>" + nutrientInfoList.join("<br>")
-    }
-        else if (CallNumber == 5){
-        	
-        }
-        else if (CallNumber == 6){
-
-        	console.log("working")
-
-            	ingredientList = []
-            	foodList = data["ingredients"]
-            	for (food=0;food<foodList.length;food++){
-            		var ingredientName = foodList[food]["name"];
-            		var amount = Math.round(foodList[food]["amount"]["metric"]["value"]) + " " + foodList[food]["amount"]["metric"]["unit"];
-            		var ingredientString = "<div class='tags has-addons px-1'><span class='tag'>"+amount+"</span><span class='tag is-success'>"+ingredientName+"</span></div>"
-            		ingredientList.push(ingredientString)
-            	}
-            	//console.log(ingredientList)
-            	document.getElementById("ingredientInfo").innerHTML = ingredientList.join(" ")
-        	
-        }
-
-          
-
-
-    } 
-)
-
-    }
-    
-
-
-async function goSearch2()
-
-{
-
-	if (mylist.length == 0){
-		alert("Please Select an Ingredient")
-		return
-	}
-
-    apikey = '1e4ac0fc6eff4598a34767b5a6ffaa14' 
-    var final = mylist.join(",+")
-    url1 = "https://api.spoonacular.com/recipes/findByIngredients?apiKey="+apikey+"&ingredients="+final;
-    await IngredientSearch(url1, 1);
-    foodname = document.getElementById("sample").innerHTML
-    url2 = "https://api.spoonacular.com/recipes/"+foodname+"/information?apiKey="+apikey;
-    await IngredientSearch(url2, 2);
-    var bFood = document.getElementById.innerHTML
-    url3 = "https://api.spoonacular.com/recipes/search?apiKey=1e4ac0fc6eff4598a34767b5a6ffaa14&number=1&query="+bFood;
-    await IngredientSearch(url3, 3);
-    url4 = "https://api.spoonacular.com/recipes/"+foodname+"/nutritionWidget.json?apiKey=1e4ac0fc6eff4598a34767b5a6ffaa14";
-    await IngredientSearch(url4, 4)
-    url5 = "https://api.spoonacular.com/recipes/"+foodname+"/summary?apiKey=1e4ac0fc6eff4598a34767b5a6ffaa14";
-    await IngredientSearch(url5, 5)
-    url6 = "https://api.spoonacular.com/recipes/"+foodname+"/ingredientWidget.json?apiKey=1e4ac0fc6eff4598a34767b5a6ffaa14";
-    await IngredientSearch(url6, 6)
-}
 
 
 

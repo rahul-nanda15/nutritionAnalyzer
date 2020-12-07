@@ -1,0 +1,70 @@
+<html>
+
+	<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+	<link rel="stylesheet" href="ourdata.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/4b51920527.js"></script>
+	
+			<title>Our Data</title>
+
+	</head>
+
+	<body>
+    <div id="filler" class="has-background-success" data-aos="fade-up"></div><!-- creating filler div for spacing arrangement -->
+
+    <div id="navContain" data-aos="fade-up">
+	     <nav class="breadcrumb is-centered  has-bullet-separator is-success has-background-success" aria-label="breadcrumbs">
+          <ul>
+          <!-- creating nav bar and active tags -->
+            <li><a class="has-text-white has-text-weight-semibold" href="index.html">Home</a></li>
+            <li><a class="has-text-white has-text-weight-semibold"href="byRecipe.html" aria-current="page">Recipe Search</a></li>
+            <li><a class="has-text-white has-text-weight-semibold"href="byIngredient.html">Fridge Search</a></li>
+   
+            <li  class="is-active"><a href="#">Our Data</a></li><!-- active navigation bar class -->
+    
+         </ul>
+      </nav>	
+    </div>
+
+    <div id="contentDiv" data-aos="fade-up"> <!-- content div -->
+	
+
+	   <div class="has-background-success">
+		    <div id="Greentitle" data-aos="fade-up"><h1 class="is-size-1 has-text-white has-text-centered is-family-primary  has-text-weight-bold">Our Nutrition Data</h1></div> <!-- setting css classes for color and font style -->
+		    <div class="has-background-success" id="whitetext">
+
+		      <div class="has-text-white has-text-weight-bold"><br><br>How We calculated Our Score: Each recipe you've found in our analyzer was given a nutritional score that was categorized from "Not Healthy" to "Extremely Healthy." As a way to provide you with only the healthiest recipes, our score was found by doing several calculations to make your meal planning easier. Here is how it works: Each meal you eat everyday has dozens of different nutrients within them that that make up their ontology. While we have these numbers, which ones of these nutrients are actually beneficial to the human body? <br> <br>With this application, we have identified all of the "Good" nutrients in each of the 10 top recipes that are associated with your recipe keyword or selection of ingredients. With these nutrients we have also determined their quantity in each recipe in terms of its "Percent of Daily Value" (%) and presented it to you in the form of the progress bars you see on each modal/pop up (top 13 nutrients for the recipe). Finally, by averaging the recipe's percent of daily value for each nutrient, we are able to provide you with a score for each recipe you search for. With that score,  we finally prioritize the one with the highest value and present that one to you on your display.<br> <br> Example: 3 vital nutrients in a Yogurt and Granola Parfait are its protein, manganese, and phosphorus. It has 18g of protein, 1mg of manganese, and 331 mg of phosphorous. In terms of its percent of daily value, it serves appx. 36% of the protein you need in a day, 94% of the manganese you need in a day, and 33% of the phosphorous you need in a day. Then by averaging these % values, you would get the final Nutrition Score for Yogurt and Granola Parfait.<br> <br>{ 36 + 94 + 33 } = { 163 }<br> <br> { 163/3 } = { ~54~ } (Nutrition Score)</div>
+
+
+	      </div>
+
+        <div class="images"> <!-- images div -->
+
+          <div class="has-text-white has-text-weight-bold"><img src="spoon.svg" id="spoonacularimg"><br><br>Spoonacular Database</div>
+         <div class="has-text-white has-text-weight-bold"><img src="bulma.png" id="bulmaimg"><br><br><div id="bulmatext">Bulma IO CSS Library</div></div>
+
+        </div>
+
+    </div>
+
+ 
+
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> <!-- referencing jquery-->
+  		<script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script><!-- referencing existing JS animation library -->
+  		
+	</body>
+
+	<script>
+
+//setting duration/length for animations throughout the webpage
+			AOS.init({
+        duration: 1600,
+      })
+
+
+	</script>
+
+
+</html>

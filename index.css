@@ -6,154 +6,21 @@
   box-sizing: border-box;
   
 }
-#searchcontain{
-	padding-top: 10px;
-}
-.menu{
-	width: 75px;
-	height: 30px;
-	border-radius: 5px;
-	border-color: #23d160;
-	padding: 5px;
-	font-size: 10px;
-	color: #23d160;
-
-}
-tr{
-	padding-top: 15px;
-}
-th{
-	padding-right: 10px;
-}
-
-#btns{
-	display: none;
-}
-
-#Table1{
-	width: 150px;
-}
 
 
-#bottom{
-
-	padding-top: 20px;
-	display: grid;
-  	grid-template-columns: auto auto  ;
-  	padding-left: 15px;
-}
-
-#cContent{
-	padding-left: 15px;
-}
-
-#dropContain{
-
-	padding-top: 20px;
-	display: grid;
-  	grid-template-columns: auto auto auto ;
-}
-#dropContain1{
-	
-	padding-top: 20px;
-	display: grid;
-  	grid-template-columns: auto auto auto ;
-}
-#dropContain2{
-	
-	padding-top: 20px;
-	display: grid;
-  	grid-template-columns: auto auto auto ;
-}
-
-#searchBar{
-	padding-top: 30px;
-}
-#textContain{
-	padding:10px;
-}
-#recentText{
-	padding-left:10px;
-}
-.info1{
-	display: grid;
-  	grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
-  	padding-top: 25px;
-
-}
-#popup{
-	width: 600px;
-}
-.recipeImg{
-	width: 200px;
-	height: 200px;
-	border-radius: 5px;
-	background-color: lightgray;
 
 
-}
-#foodimg{
-
-	max-width: : 200px;
-	max-height: 200px;
-	border-radius: 5px;
-}
-#recent{
-	height: 153px;
-	overflow: auto;
-	border-radius: 5px;
-	border-style: solid;
-	border-width: 1px;
-	border-color: #23d160;
-}
-#RandomRecent {
-	padding-top: 30px;
-	padding-bottom: 32px;
-}
-.Fwidget{
-	padding-right: 5px;
-}
-.Fresults{
-	padding-left: 5px;
-}
+/*padding of navigation container*/
 .NavC{
 	padding: 20px;
 }
+
+/* spoonacular image width */
 #spoon{
 	width: 100px;
 }
-#subtitle{
-	padding-left: 30px;
-}
-#Resources{
-	padding-top: 100px;
-}
-#ingredientContain{
-	padding-left: 30px;
 
-}
-#otherRecipe{
-	padding-left: 30px;
-}
-#About{
-	padding-bottom: 60px;
-}
-#nutrientInfo{
-	padding-left: 60px;
-}
-.fSearch-container{
-	display: grid;
-  	grid-template-columns: auto auto;
-  	padding-left: 130px;
-  	padding-right: 130px;
-  	padding-top: 40px;
-  	padding-bottom: 100px;
-}
-.pContain {
-	display: grid;
-	grid-template-columns: auto auto;
-}
-
+/* making the navigationn bar in a grid format ; multiple divs in one row - horizontally alligned*/
 .navContain{
   display: grid;
   grid-template-columns: auto auto auto;
@@ -161,15 +28,13 @@ th{
   padding-right: 100px;
   padding-left: 100px;
 }
-#ham{
+
+/*styling all icons*/
+#icon{
 	padding-left: 10px;
 }
-body{
-  margin: 0;
-}	
-#whitetext{
-	padding-top: 50px;
-}
+
+/* adding css for title and its underline*/
 #title{
 	padding-top: 70px;
 	display: inline-block;
@@ -186,23 +51,7 @@ body{
     left: 25%;
     border-bottom: 1px solid #55a65b;
 }
-#Greentitle{
-	padding-top: 70px;
-	display: inline-block;
-  padding-bottom: 5px;
-  position: relative;
-  left: 42%;
-}
-#Greentitle:before{
-    content: "";
-    position: absolute;
-    width: 50%;
-    height: 1px;
-    bottom: 0;
-    left: 25%;
-    border-bottom: 1px solid white;
-}
-
+/*powered by spoonacular css tag. making it a grid element to place the image and caption beside each other*/
 .logocontain{
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
@@ -219,7 +68,7 @@ body{
 	font-size: 30px;
 	letter-spacing: 0px;
 }
-
+/*styling hero image (background image) using a gradient background/overlay on top of the image*/
 .hero-container{
    background: lightgreen;  /* fallback colour. Make sure this is just one solid colour. */
     background: -webkit-linear-gradient(rgb(71, 152, 71, 0.2), rgba(50, 70, 50, 0.8)), url("heroimg.jpg");
@@ -245,7 +94,7 @@ body{
   flex-direction: column;
   height: 100%;
 }
-
+/*hero image title div*/
 .ten{
 	
 	margin: 0;
@@ -267,7 +116,7 @@ h1 {
 
 }
 
-
+/*customizing font of webpage title*/
 .ten h1 {
   font-size:40px; font-weight:200; text-transform:uppercase;
 }
@@ -287,18 +136,6 @@ h1 {
 
 
 
-
-button{
-  border-radius: 0px 4px 4px 0px;
-  border: 0;
-  padding: 14px;
-  cursor: pointer;
-}
-
-button:hover{
-  background: #1565C0;
-  color: #ffffff;
-}
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
 * {
   margin: 0;
@@ -307,6 +144,7 @@ button:hover{
 html, body {
   height: 100%;
 }
+/*scroll arrow btn container css*/
 section {
   position: relative;
   width: 100%;
@@ -321,8 +159,8 @@ section::after {
   height: 80%;
   
 }
-
-.demo a {
+/*scroll arrow btn css*/
+.arrow a {
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -336,7 +174,7 @@ section::after {
   text-decoration: none;
   transition: opacity .3s;
 }
-.demo a:hover {
+.arrow a:hover {
   opacity: .5;
 }
 
@@ -348,23 +186,16 @@ section::after {
 .grid-item {
 	width:600px;
 }
-#button1 {
-	padding-left: 250px;
-	padding-top: 50px;
-}
-#button2{
-	padding-left: 295px;
-	padding-top: 0px;
-}
+
 h5{
 	color: white;
 	font-family: "Josefin Sans", sans-serif;
 }
-
-#section03 a {
+/*scroll arrow btn css*/
+#scrollbtn a {
   padding-top: 60px;
 }
-#section03 a span {
+#scrollbtn a span {
   position: absolute;
   top: 0;
   left: 50%;
@@ -375,7 +206,8 @@ h5{
   border-radius: 100%;
   box-sizing: border-box;
 }
-#section03 a span::after {
+/*styling the after and before identifiers for the arrow btn*/
+#scrollbtn a span::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -389,7 +221,7 @@ h5{
   transform: rotate(-45deg);
   box-sizing: border-box;
 }
-#section03 a span::before {
+#scrollbtn a span::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -404,6 +236,7 @@ h5{
   animation: sdb03 3s infinite;
   box-sizing: border-box;
 }
+/*scroll arrow pulse animation using css keyframes*/
 @-webkit-keyframes sdb03 {
   0% {
     opacity: 0;
@@ -435,62 +268,3 @@ h5{
   }
 }
 
-
-
-@-webkit-keyframes sdb07 {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes sdb07 {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-
-
-@-webkit-keyframes sdb10 {
-  0% {
-    -webkit-transform: translate(0, 0);
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  80% {
-    -webkit-transform: translate(0, 20px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes sdb10 {
-  0% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  80% {
-    transform: translate(0, 20px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
